@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ProjektZespolowy</string>
+    <string name="logo_lub_na">
+    Logo lub nazwa aplikacji
+    </string>
+
+    <string name="log_in">
+    Log in
+    </string>
+
+    <string name="username">
+username
+</string>
+    <string name="password">
+password
+</string>
+
+    <string name="ok">
+OK
+</string>
+    <string name="or_register">
+or register
+</string>
+
+
+
+
+
+
+    <string name="register">
+Register
+</string>
+
+    <string name="or_log_in">
+or log in
+</string>
+    <string name="ProjektZespolowy">Projekt Zespolowy</string>
+</resources>
