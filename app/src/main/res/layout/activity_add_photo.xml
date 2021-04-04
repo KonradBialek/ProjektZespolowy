@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_photo_activity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/add_picture_to_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:text="Add picture to gallery"
+        android:textAppearance="@style/settings" />
+
+    <Button
+        android:id="@+id/upload_from_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_picture_to_gallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="UploadFromGallery"
+        android:text="Upload from gallery"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
+    <Button
+        android:id="@+id/take_a_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_from_gallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="TakeAPicture"
+        android:text="Take a picture"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
+
+    <!--        <include layout="@layout/activity_navigation"/>-->
+
+</RelativeLayout>

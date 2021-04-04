@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/settings_activity"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/frame_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="218dp"
+        android:background="@drawable/frame">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center_horizontal|top"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="0sp"
+            android:hint="type in user or plant name "
+            android:textAppearance="@style/username_password" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/search_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SearchUser"
+        android:text="Search user"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
+    <Button
+        android:id="@+id/search_plant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SearchPlant"
+        android:text="Search plant"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
+
+
+    <!--        <include layout="@layout/activity_navigation"/>-->
+
+</RelativeLayout>

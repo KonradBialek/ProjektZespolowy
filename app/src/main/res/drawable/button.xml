@@ -6,6 +6,7 @@
     android:height="46dp"
     android:viewportWidth="112"
     android:viewportHeight="46"
+    android:backgroundTint="#6A8A7B"
     >
     <group>
         <clip-path
@@ -13,7 +14,7 @@
             />
         <path
             android:pathData="M0 0V46H112V0"
-            android:fillColor="#BFF4DB"
+            android:fillColor="#6A8A7B"
             />
     </group>
 </vector>

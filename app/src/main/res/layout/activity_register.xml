@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rejestracja"
+    android:id="@+id/register_ativity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/rejestracja">
+    android:background="@drawable/background">
 
     <!-- Logo lub nazwa aplikacji -->
     <TextView
@@ -23,23 +23,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo_lub_na"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="100dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
         android:text="@string/register"
-        android:textAppearance="@style/register" />
+        android:textAppearance="@style/log_in_register" />
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/frame_6"
+    <RelativeLayout
+        android:id="@+id/frame_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="211dp"
-        android:background="@drawable/frame_6">
+        android:layout_marginTop="15dp"
+        android:background="@drawable/frame">
 
         <EditText
             android:id="@+id/username"
@@ -52,19 +50,19 @@
             android:gravity="center_horizontal|top"
             android:inputType="textPersonName"
             android:lineSpacingExtra="0sp"
-            android:text="@string/username"
-            android:textAppearance="@style/username" />
+            android:hint="@string/username"
+            android:textAppearance="@style/username_password" />
 
     </RelativeLayout>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/frame_5"
+    <RelativeLayout
+        android:id="@+id/frame_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/frame_6"
+        android:layout_below="@+id/frame_1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:background="@drawable/frame_5">
+        android:background="@drawable/frame">
 
         <EditText
             android:id="@+id/password"
@@ -77,18 +75,18 @@
             android:gravity="center_horizontal|top"
             android:inputType="textPassword"
             android:lineSpacingExtra="0sp"
-            android:text="@string/password"
-            android:textAppearance="@style/password" />
+            android:hint="@string/password"
+            android:textAppearance="@style/username_password" />
     </RelativeLayout>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/frame_4"
+    <RelativeLayout
+        android:id="@+id/frame_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/frame_5"
+        android:layout_below="@+id/frame_2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:background="@drawable/frame_5">
+        android:background="@drawable/frame">
 
         <EditText
             android:id="@+id/password2"
@@ -101,43 +99,39 @@
             android:gravity="center_horizontal|top"
             android:inputType="textPassword"
             android:lineSpacingExtra="0sp"
-            android:text="@string/password"
-            android:textAppearance="@style/password" />
+            android:hint="@string/password"
+            android:textAppearance="@style/username_password" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/frame_8"
+    <Button
+        android:id="@+id/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/frame_4"
+        android:layout_below="@+id/frame_3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:background="@drawable/frame_8"
-        android:textAppearance="@style/ok">
-
-        <TextView
-            android:id="@+id/ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="11dp"
-            android:gravity="center_horizontal|top"
-            android:lineSpacingExtra="0sp"
-            android:text="@string/ok"
-            android:textAppearance="@style/ok" />
-    </RelativeLayout>
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Register"
+        android:text="@string/ok"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
 
     <Button
         android:id="@+id/or_log_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/frame_8"
+        android:layout_below="@+id/ok"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
+        android:onClick="openLogInActivity"
         android:text="@string/or_log_in"
-        android:textAppearance="@style/or_log_in" />
+        android:textAppearance="@style/log_in_register"
+        android:background="@drawable/button"/>
+
+<!--    <include layout="@layout/activity_navigation"/>-->
+
 </RelativeLayout>
 
