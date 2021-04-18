@@ -1,57 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recognition_3_activity"
+    android:id="@+id/recognition_fragment"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.recognition.RecognitionFragment">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
-        android:gravity="center_horizontal|top"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/species"
+        android:id="@+id/lets_get_started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView3"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="180dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:text="Species"
+        android:text="Let's get started"
         android:textAppearance="@style/settings" />
+
     <Button
-        android:id="@+id/another_picture"
+        android:id="@+id/upload_from_gallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/species"
+        android:layout_below="@+id/lets_get_started"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:onClick="anotherPicture"
-        android:text="another picture"
-        android:textAppearance="@style/log_in_register"
-        android:background="@drawable/button" />
-    <Button
-        android:id="@+id/confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/another_picture"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:onClick="Confirm"
-        android:text="confirm"
+        android:onClick="UploadFromGallery"
+        android:text="Upload from gallery"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
+    <Button
+        android:id="@+id/take_a_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_from_gallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="TakeAPicture"
+        android:text="Take a picture"
+        android:textAppearance="@style/button_text"
+        android:background="@drawable/button" />
+
+<!--        <include layout="@layout/activity_navigation"/>-->
+
 </RelativeLayout>

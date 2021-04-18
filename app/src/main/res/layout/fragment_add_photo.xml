@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/add_photo_activity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.addPhoto.AddPhotoFragment">
 
     <TextView
         android:id="@+id/add_picture_to_gallery"
@@ -26,7 +28,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:onClick="UploadFromGallery"
+        android:onClick="UploadFromGallery_add"
         android:text="Upload from gallery"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
@@ -39,7 +41,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:onClick="TakeAPicture"
+        android:onClick="TakeAPicture_add"
         android:text="Take a picture"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />

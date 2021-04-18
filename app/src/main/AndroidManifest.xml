@@ -3,6 +3,7 @@
     package="com.example.projektzespolowy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -16,16 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjektZespolowy">
-        <activity android:name=".Recognition4Activity"></activity>
-        <activity android:name=".Recognition3Activity" />
-        <activity android:name=".Recognition2Activity" />
-        <activity android:name=".RecognitionActivity" />
-        <activity android:name=".AddPhoto2Activity" />
-        <activity android:name=".AddPhotoActivity" />
-        <activity android:name=".PlantBrowserActivity" />
-        <activity android:name=".UserBrowserActivity" />
-        <activity android:name=".BrowserActivity" />
-        <activity android:name=".SettingsActivity" />
+        <!--        <activity android:name=".SettingsActivity" />-->
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"

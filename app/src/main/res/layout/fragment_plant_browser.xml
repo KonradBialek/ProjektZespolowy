@@ -5,7 +5,8 @@
     android:id="@+id/plant_browser_activity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.plantBrowser.PlantBrowserFragment">
     <Button
         android:id="@+id/go_back_to_search"
         android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="No plants found. Similar plants:"
                 android:textAppearance="@style/username"/>
-<!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
+            <!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
 
             <include layout="@layout/plantlayout"/>
             <include layout="@layout/plantlayout"/>

@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recognition_4_activity"
+    android:id="@+id/recognition_4_fragment"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.recognition4.Recognition4Fragment">
 
     <TextView
         android:id="@+id/add_plant"
@@ -72,7 +73,7 @@
         android:layout_marginTop="90dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:onClick="Confirm"
+        android:onClick="Confirm2"
         android:text="OK"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />

@@ -2,29 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/add_photo_2_activity"
+    android:id="@+id/recognition_3_fragment"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.recognition3.Recognition3Fragment">
 
-    <TextView
-        android:id="@+id/add_picture_to_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="add picture to gallery"
-        android:textAppearance="@style/username" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_below="@id/add_picture_to_gallery"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="120dp"
         android:gravity="center_horizontal|top"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -33,29 +24,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView3"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:text="species"
-        android:textAppearance="@style/username" />
-    <TextView
-        android:id="@+id/plants_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/species"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="plant's name"
-        android:textAppearance="@style/username" />
-
+        android:text="Species"
+        android:textAppearance="@style/settings" />
     <Button
         android:id="@+id/another_picture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/plants_name"
+        android:layout_below="@id/species"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
         android:onClick="anotherPicture"
@@ -63,7 +44,7 @@
         android:textAppearance="@style/log_in_register"
         android:background="@drawable/button" />
     <Button
-        android:id="@+id/ok"
+        android:id="@+id/confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/another_picture"
@@ -71,8 +52,8 @@
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:onClick="addPhoto"
-        android:text="OK"
+        android:onClick="Confirm"
+        android:text="confirm"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
 </RelativeLayout>

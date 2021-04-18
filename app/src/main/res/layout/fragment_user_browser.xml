@@ -5,7 +5,8 @@
     android:id="@+id/user_browser_activity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ui.userBrowser.UserBrowserFragment">
     <Button
         android:id="@+id/go_back_to_search"
         android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="No users found. Similar users:"
                 android:textAppearance="@style/username"/>
-<!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
+            <!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
 
             <include layout="@layout/userlayout"/>
             <include layout="@layout/userlayout"/>
@@ -50,6 +51,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-
 </RelativeLayout>

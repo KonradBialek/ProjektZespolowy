@@ -17,7 +17,7 @@ public class LogInActivity extends AppCompatActivity {
     public void LogIn (View view){
         final String username = ((EditText)findViewById(R.id.username)).getText().toString();
         final String password = ((EditText)findViewById(R.id.password)).getText().toString();
-        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
+        Intent intent = new Intent(this, NavigationActivity.class); // tmp
         startActivity(intent);
     }
     public void openRegisterActivity(View view){

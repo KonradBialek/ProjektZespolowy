@@ -135,5 +135,6 @@
         android:text="Plant"
         android:background="@drawable/button" />
 
+<!--    <include layout="@layout/activity_navigation"/>-->
 
 </RelativeLayout>
