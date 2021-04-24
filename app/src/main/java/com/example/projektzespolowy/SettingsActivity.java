@@ -89,4 +89,9 @@ public class SettingsActivity extends AppCompatActivity {
 //        startActivity(intent);
         toastMsg("Account deleted");
     }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
+    }
 }

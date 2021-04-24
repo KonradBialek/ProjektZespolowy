@@ -50,4 +50,9 @@ public class RecognitionActivity extends AppCompatActivity {
             // display error state to the user
         }
     }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
+    }
 }

@@ -2,6 +2,7 @@ package com.example.projektzespolowy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class AddPhoto2Activity extends AppCompatActivity {
         Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
         toast.show();
     }
+
     public void anotherPicture(View view) {
         finish();
     }
@@ -30,5 +32,10 @@ public class AddPhoto2Activity extends AppCompatActivity {
     public void addPhoto(View view) {
         toastMsg("Photo added");
 
+    }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
     }
 }

@@ -24,4 +24,9 @@ public class PlantBrowserActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(this, "Otwarto roślinę", Toast.LENGTH_LONG);
         toast.show();
     }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
+    }
 }

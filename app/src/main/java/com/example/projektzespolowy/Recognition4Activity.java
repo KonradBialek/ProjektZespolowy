@@ -14,7 +14,7 @@ public class Recognition4Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recognition4);
-        ImageView iv_photo=(ImageView)findViewById(R.id.imageView3);
+        ImageView iv_photo = (ImageView) findViewById(R.id.imageView3);
         Bundle extras = getIntent().getExtras();
         Uri myUri = Uri.parse(extras.getString("imageUri"));
         iv_photo.setImageURI(myUri);
@@ -22,5 +22,10 @@ public class Recognition4Activity extends AppCompatActivity {
 
     public void Confirm(View view) {
         finish();
+    }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
     }
 }

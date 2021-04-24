@@ -55,9 +55,6 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     public void LogOut(View view) {
-//        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
-//        startActivity(intent);
-//        finish();
         Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

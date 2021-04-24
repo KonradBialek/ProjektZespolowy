@@ -20,6 +20,7 @@ public class Recognition2Activity extends AppCompatActivity {
         Uri myUri = Uri.parse(extras.getString("imageUri"));
         iv_photo.setImageURI(myUri);
     }
+
     public void anotherPicture(View view) {
         finish();
     }
@@ -27,6 +28,11 @@ public class Recognition2Activity extends AppCompatActivity {
     public void Recognize(View view) {
         Intent intent = new Intent(this, Recognition3Activity.class);
         intent.putExtra("imageUri", getIntent().getExtras().getString("imageUri"));
+        startActivity(intent);
+    }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);
     }
 }

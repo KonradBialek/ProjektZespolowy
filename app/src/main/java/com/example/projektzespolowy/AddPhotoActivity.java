@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.EditText;
 
 public class AddPhotoActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -34,11 +33,6 @@ public class AddPhotoActivity extends AppCompatActivity {
         }
     }
 
-    public void Menu(View view) {
-        Intent intent = new Intent(this, NavigationActivity.class); // tmp
-        startActivity(intent);
-    }
-
     public void UploadFromGallery(View view) {
         Intent uploadFromGallery = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         try {
@@ -55,5 +49,10 @@ public class AddPhotoActivity extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
             // display error state to the user
         }
+    }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class);
+        startActivity(intent);
     }
 }
