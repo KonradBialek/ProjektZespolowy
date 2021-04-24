@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/settings_activity"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:background="@drawable/background">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_activity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    tools:context=".BrowserActivity">
 
     <RelativeLayout
         android:id="@+id/frame_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/change_password"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="218dp"
         android:background="@drawable/frame">
@@ -23,9 +25,9 @@ android:background="@drawable/background">
             android:layout_marginTop="10dp"
             android:ems="10"
             android:gravity="center_horizontal|top"
+            android:hint="type in user or plant name "
             android:inputType="textPersonName"
             android:lineSpacingExtra="0sp"
-            android:hint="type in user or plant name "
             android:textAppearance="@style/username_password" />
     </RelativeLayout>
 
@@ -36,12 +38,14 @@ android:background="@drawable/background">
         android:layout_below="@+id/frame_1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:background="@drawable/button"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
         android:onClick="SearchUser"
         android:text="Search user"
         android:textAppearance="@style/button_text"
-        android:background="@drawable/button" />
+        tools:ignore="OnClick" />
+
     <Button
         android:id="@+id/search_plant"
         android:layout_width="wrap_content"
@@ -49,12 +53,12 @@ android:background="@drawable/background">
         android:layout_below="@+id/search_user"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:background="@drawable/button"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
         android:onClick="SearchPlant"
         android:text="Search plant"
-        android:textAppearance="@style/button_text"
-        android:background="@drawable/button" />
+        android:textAppearance="@style/button_text" />
 
 
     <!--        <include layout="@layout/activity_navigation"/>-->

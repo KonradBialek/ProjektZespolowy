@@ -15,9 +15,9 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void LogIn (View view){
-        final String username = ((EditText)findViewById(R.id.username)).getText().toString();
-        final String password = ((EditText)findViewById(R.id.password)).getText().toString();
-        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
+        final String username = ((EditText) findViewById(R.id.username)).getText().toString();
+        final String password = ((EditText) findViewById(R.id.password)).getText().toString();
+        Intent intent = new Intent(this, NavigationActivity.class); // tmp
         startActivity(intent);
     }
     public void openRegisterActivity(View view){
@@ -28,10 +28,5 @@ public class LogInActivity extends AppCompatActivity {
     public void openPlantRecognitionActivity(View view){
         Intent intent = new Intent(this, PlantRecognitionActivity.class);
         startActivity(intent);
-    }
-
-    public void NavForward() {
-        View view=findViewById(R.id.drawer_layout);
-        view.bringToFront();
     }
 }

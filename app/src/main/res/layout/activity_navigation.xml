@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:background="@drawable/background"
+    tools:context=".NavigationActivity">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+    <TextView
+        android:id="@+id/menu"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
-</androidx.drawerlayout.widget.DrawerLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:text="Menu"
+        android:textAppearance="@style/settings" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="GoBack"
+        android:text="Go back"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="MyProfile"
+        android:text="My Profile"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="AddPhoto"
+        android:text="Add photo"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Search"
+        android:text="Search"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/recognize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Recognize"
+        android:text="Recognize"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recognize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Calendar"
+        android:text="Calendar"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Settings"
+        android:text="Settings"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="LogOut"
+        android:text="Log out"
+        android:textAppearance="@style/log_in_register" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:onClick="Exit"
+        android:text="Exit"
+        android:textAppearance="@style/log_in_register" />
+
+</RelativeLayout>

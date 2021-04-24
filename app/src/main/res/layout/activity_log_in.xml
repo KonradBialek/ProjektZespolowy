@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LogInActivity"
     android:id="@+id/login_activity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
 
-<!--    <include layout="@layout/activity_navigation"/>-->
+    <!--    <include layout="@layout/activity_navigation"/>-->
 
     <!-- Logo lub nazwa aplikacji -->
     <TextView

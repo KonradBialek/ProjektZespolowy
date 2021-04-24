@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.EditText;
 
 public class AddPhotoActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -25,12 +26,17 @@ public class AddPhotoActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         //Detects request codes
-        if((requestCode==GET_FROM_GALLERY || requestCode==REQUEST_IMAGE_CAPTURE) && resultCode == Activity.RESULT_OK) {
+        if ((requestCode == GET_FROM_GALLERY || requestCode == REQUEST_IMAGE_CAPTURE) && resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
-            Intent intent=new Intent(this,AddPhoto2Activity.class);
+            Intent intent = new Intent(this, AddPhoto2Activity.class);
             intent.putExtra("imageUri", uri.toString());
             startActivity(intent);
         }
+    }
+
+    public void Menu(View view) {
+        Intent intent = new Intent(this, NavigationActivity.class); // tmp
+        startActivity(intent);
     }
 
     public void UploadFromGallery(View view) {
