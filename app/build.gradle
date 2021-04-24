@@ -39,4 +39,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    def nav_version = "2.3.5"
+
+    // Java language implementation
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 }

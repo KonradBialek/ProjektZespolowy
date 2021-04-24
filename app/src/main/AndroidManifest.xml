@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.projektzespolowy">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,9 +15,15 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjektZespolowy"
-        tools:targetApi="n">
-        <activity android:name=".NavigationActivity"></activity>
+        android:theme="@style/Theme.ProjektZespolowy">
+        <!--        <activity-->
+        <!--            android:name=".MenuActivity"-->
+        <!--            android:label="@string/title_activity_menu"-->
+        <!--            android:theme="@style/Theme.ProjektZespolowy.NoActionBar"></activity>-->
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.ProjektZespolowy.NoActionBar" />
         <activity android:name=".Recognition4Activity" />
         <activity android:name=".Recognition3Activity" />
         <activity android:name=".Recognition2Activity" />
