@@ -1,13 +1,13 @@
 package com.example.projektzespolowy;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -30,11 +30,8 @@ public class SettingsActivity extends AppCompatActivity {
         if (requestCode == GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
             ImageView iv_photo = (ImageView) findViewById(R.id.imageView3);
             Uri myUri = data.getData();
-            String string = myUri.toString();
-            Uri uri = Uri.parse(string);
-//            Toast.makeText(this, string, Toast.LENGTH_LONG).show();
             try {
-                iv_photo.setImageURI(uri);
+                iv_photo.setImageURI(myUri);
             } catch (NullPointerException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
@@ -61,22 +58,13 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void AddImage(View view) {
-        Intent uploadFromGallery = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        Intent uploadFromGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         try {
             startActivityForResult(uploadFromGallery, GET_FROM_GALLERY);
         } catch (ActivityNotFoundException e) {
             // display error state to the user
         }
         toastMsg("Image added");
-    }
-
-    public void UploadFromGallery(View view) {
-        Intent uploadFromGallery = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-        try {
-            startActivityForResult(uploadFromGallery, GET_FROM_GALLERY);
-        } catch (ActivityNotFoundException e) {
-            // display error state to the user
-        }
     }
 
     public void ChangeImage(View view) {

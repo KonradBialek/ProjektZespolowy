@@ -6,9 +6,13 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Toast;
+
+import java.io.File;
 
 public class AddPhotoActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -25,12 +29,35 @@ public class AddPhotoActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         //Detects request codes
-        if ((requestCode == GET_FROM_GALLERY || requestCode == REQUEST_IMAGE_CAPTURE) && resultCode == Activity.RESULT_OK) {
-            Uri uri = data.getData();
-            Intent intent = new Intent(this, AddPhoto2Activity.class);
-            intent.putExtra("imageUri", uri.toString());
-            startActivity(intent);
+        if (requestCode == GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
+            try {
+                Intent intent = new Intent(this, AddPhoto2Activity.class);
+                Uri uri = data.getData();
+                intent.putExtra("imageUri", uri.toString());
+                startActivity(intent);
+            } catch (NullPointerException e) {
+                Toast.makeText(this, data.getData().toString(), Toast.LENGTH_LONG).show();
+            }
         }
+//        else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+//            try {
+//                Intent intent = new Intent(this, AddPhoto2Activity.class);
+//                Uri uri = null;
+//                File file = null;
+//                if (Build.VERSION.SDK_INT == Build.VERSION_CODES.M){
+//                    uri = intent.getData();
+//                    file = new File(uri.getPath());
+//                    // now you can upload your image file
+//                }else{
+//                    // in android version lower than M your method must work
+//                }
+//                assert file != null;
+//                intent.putExtra("imageUri", file.toString());
+//                startActivity(intent);
+//            } catch (NullPointerException e) {
+//                Toast.makeText(this, data.getData().toString(), Toast.LENGTH_LONG).show();
+//            }
+//        }
     }
 
     public void UploadFromGallery(View view) {

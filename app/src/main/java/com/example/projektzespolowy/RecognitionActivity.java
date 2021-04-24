@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Toast;
 
 public class RecognitionActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -29,6 +30,7 @@ public class RecognitionActivity extends AppCompatActivity {
             Uri uri = data.getData();
             Intent intent=new Intent(this,Recognition2Activity.class);
             intent.putExtra("imageUri", uri.toString());
+            Toast.makeText(this, data.getData().toString(), Toast.LENGTH_LONG).show();
             startActivity(intent);
         }
     }
