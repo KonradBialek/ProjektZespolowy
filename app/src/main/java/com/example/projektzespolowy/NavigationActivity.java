@@ -27,6 +27,7 @@ public class NavigationActivity extends AppCompatActivity {
     public void MyProfile(View view) {
 //        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
 //        startActivity(intent);
+        // TODO widok profilu
     }
 
     public void AddPhoto(View view) {
@@ -47,6 +48,8 @@ public class NavigationActivity extends AppCompatActivity {
     public void Calendar(View view) {
 //        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
 //        startActivity(intent);
+        // TODO widok kalendarza
+
     }
 
     public void Settings(View view) {

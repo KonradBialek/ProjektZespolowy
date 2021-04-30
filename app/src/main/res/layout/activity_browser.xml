@@ -31,17 +31,17 @@
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:gravity="center_horizontal|top"
-            android:hint="type in user or plant name "
+            android:hint="type in user name or plant species"
             android:inputType="textPersonName"
             android:lineSpacingExtra="0sp"
-            android:textAppearance="@style/username_password" />
+            android:textAppearance="@style/username_password_small" />
     </RelativeLayout>
 
     <Button

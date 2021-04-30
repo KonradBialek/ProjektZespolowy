@@ -33,61 +33,194 @@
         android:text="Add plant to your \nprofile"
         android:textAppearance="@style/settings" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/add_plant"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal|top"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_plant"
+        android:layout_marginTop="30dp">
 
-    <TextView
-        android:id="@+id/plants_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="Plant's name"
-        android:textAppearance="@style/log_in_register" />
-    <TextView
-        android:id="@+id/watering_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/plants_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="last watering date"
-        android:textAppearance="@style/log_in_register" />
-    <TextView
-        android:id="@+id/water_freq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/watering_date"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="how often do you want to water \nthis plant? (in days)"
-        android:textAppearance="@style/log_in_register" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/water_freq"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:onClick="Confirm"
-        android:text="OK"
-        android:textAppearance="@style/button_text"
-        android:background="@drawable/button" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal|top"
+                tools:srcCompat="@tools:sample/avatars" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/plants_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/imageView3"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:gravity="center_horizontal|top"-->
+<!--                android:lineSpacingExtra="0sp"-->
+<!--                android:text="Plant's name"-->
+<!--                android:textAppearance="@style/log_in_register" />-->
+
+        <RelativeLayout
+            android:id="@+id/frame_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/frame">
+
+            <EditText
+                android:id="@+id/plants_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="center_horizontal|top"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="0sp"
+                android:hint="Plant's name"
+                android:textAppearance="@style/username_password" />
+        </RelativeLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/watering_date"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/plants_name"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:gravity="center_horizontal|top"-->
+<!--                android:lineSpacingExtra="0sp"-->
+<!--                android:text="last watering date"-->
+<!--                android:textAppearance="@style/log_in_register" />-->
+            <RelativeLayout
+                android:id="@+id/frame_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/frame">
+
+                <EditText
+                    android:id="@+id/watering_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:gravity="center_horizontal|top"
+                    android:inputType="textPersonName"
+                    android:lineSpacingExtra="0sp"
+                    android:hint="last watering date"
+                    android:textAppearance="@style/username_password" />
+            </RelativeLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/water_freq"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/watering_date"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:gravity="center_horizontal|top"-->
+<!--                android:lineSpacingExtra="0sp"-->
+<!--                android:text="how often do you want to water \nthis plant? (in days)"-->
+<!--                android:textAppearance="@style/log_in_register" />-->
+
+            <RelativeLayout
+                android:id="@+id/frame_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/frame">
+
+                <EditText
+                    android:id="@+id/water_freq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:gravity="center_horizontal|top"
+                    android:inputType="textPersonName"
+                    android:lineSpacingExtra="0sp"
+                    android:hint="watering frequency in days"
+                    android:textAppearance="@style/username_password" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frame_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/frame">
+
+                <EditText
+                    android:id="@+id/fertilizing_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:gravity="center_horizontal|top"
+                    android:inputType="textPersonName"
+                    android:lineSpacingExtra="0sp"
+                    android:hint="last fertilizing date"
+                    android:textAppearance="@style/username_password" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frame_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/frame">
+
+                <EditText
+                    android:id="@+id/fertilizing_freq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:gravity="center_horizontal|top"
+                    android:inputType="textPersonName"
+                    android:lineSpacingExtra="0sp"
+                    android:hint="fertilizing frequency in days"
+                    android:textAppearance="@style/username_password" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/frame_5"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal|top"
+                android:lineSpacingExtra="0sp"
+                android:onClick="Confirm"
+                android:text="OK"
+                android:textAppearance="@style/button_text"
+                android:background="@drawable/button" />
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

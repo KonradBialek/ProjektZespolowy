@@ -21,6 +21,7 @@ public class Recognition4Activity extends AppCompatActivity {
     }
 
     public void Confirm(View view) {
+        // TODO tworzenie profilu rośliny
         finish();
     }
 

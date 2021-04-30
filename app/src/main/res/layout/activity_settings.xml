@@ -145,113 +145,25 @@
                 android:textAppearance="@style/button_text" />
 
             <TextView
-                android:id="@+id/change_description"
+                android:id="@+id/warning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/frame_3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="100dp"
-                android:gravity="center_horizontal|top"
-                android:lineSpacingExtra="0sp"
-                android:text="Change profile description"
-                android:textAppearance="@style/settings" />
-
-
-            <RelativeLayout
-                android:id="@+id/frame_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/change_description"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/frame">
-
-                <EditText
-                    android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:gravity="center_horizontal|top"
-                    android:hint="description"
-                    android:inputType="textLongMessage"
-                    android:lineSpacingExtra="0sp"
-                    android:textAppearance="@style/username_password" />
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/confirm2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/frame_4"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/button"
-                android:gravity="center_horizontal|top"
-                android:lineSpacingExtra="0sp"
-                android:onClick="ChangeDescription"
-                android:text="Confirm"
-                android:textAppearance="@style/button_text" />
-
-            <TextView
-                android:id="@+id/change_provile_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/confirm2"
+                android:layout_below="@+id/confirm"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|top"
                 android:lineSpacingExtra="0sp"
-                android:text="Change profile avatar"
-                android:textAppearance="@style/settings" />
-
-            <Button
-                android:id="@+id/add_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/change_provile_avatar"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button"
-                android:gravity="center_horizontal|top"
-                android:lineSpacingExtra="0sp"
-                android:onClick="AddImage"
-                android:text="Add image"
-                android:textAppearance="@style/log_in_register" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@+id/add_image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal|top"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <Button
-                android:id="@+id/change_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button"
-                android:gravity="center_horizontal|top"
-                android:lineSpacingExtra="0sp"
-                android:onClick="ChangeImage"
-                android:text="Change image"
-                android:textAppearance="@style/log_in_register" />
+                android:text="*Remember to type your passwrd to &quot;old password&quot;
+                field before deleting account."
+                android:textAppearance="@style/warning" />
 
             <Button
                 android:id="@+id/delete_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/change_avatar"
+                android:layout_below="@+id/warning"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:gravity="center_horizontal|top"
                 android:lineSpacingExtra="0sp"
