@@ -21,8 +21,6 @@
         tools:targetApi="n">
         <activity android:name=".DisplayPictureActivity"></activity>
         <activity android:name=".EditPictureActivity" />
-        <activity android:name=".AddPicture2Activity" />
-        <activity android:name=".AddPicture1Activity" />
         <activity android:name=".PlantSettingsActivity" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".MyPlantsProfileActivity" />
