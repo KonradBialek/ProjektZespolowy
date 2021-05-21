@@ -19,14 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjektZespolowy"
         tools:targetApi="n">
-        <activity android:name=".DisplayPictureActivity"></activity>
+        <activity android:name=".DisplayPictureActivity"/>
         <activity android:name=".EditPictureActivity" />
         <activity android:name=".PlantSettingsActivity" />
         <activity android:name=".CalendarActivity" />
-        <activity android:name=".MyPlantsProfileActivity" />
         <activity android:name=".UsersProfileActivity" />
         <activity android:name=".PlantsProfileActivity" />
-        <activity android:name=".MyProfileActivity" />
         <activity android:name=".NavigationActivity" />
         <activity android:name=".Recognition4Activity" />
         <activity android:name=".Recognition3Activity" />
