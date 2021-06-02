@@ -5,9 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!--    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>-->
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.CAMERA"> </uses-permission> -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -22,7 +20,13 @@
         android:theme="@style/Theme.ProjektZespolowy"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
-        <activity android:name=".NavigationActivity"></activity>
+        <activity android:name=".DisplayPictureActivity"/>
+        <activity android:name=".EditPictureActivity" />
+        <activity android:name=".PlantSettingsActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".UsersProfileActivity" />
+        <activity android:name=".PlantsProfileActivity" />
+        <activity android:name=".NavigationActivity" />
         <activity android:name=".Recognition4Activity" />
         <activity android:name=".Recognition3Activity" />
         <activity android:name=".Recognition2Activity" />
