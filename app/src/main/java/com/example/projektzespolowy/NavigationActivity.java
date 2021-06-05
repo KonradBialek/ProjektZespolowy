@@ -24,10 +24,11 @@ public class NavigationActivity extends AppCompatActivity {
         finish();
     }
 
+
     public void MyProfile(View view) {
-//        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
-//        startActivity(intent);
-        // TODO widok profilu
+       Intent myProfileIntent = new Intent(this, UsersProfileActivity.class);
+       //tu chyba trzeba będzie dodać jakieś pobieranie id użytkownika (w sensie mojego id)
+        startActivity(myProfileIntent);
     }
 
     public void AddPhoto(View view) {
@@ -46,10 +47,8 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     public void Calendar(View view) {
-//        Intent intent = new Intent(this, RecognitionActivity.class); // tmp
-//        startActivity(intent);
-        // TODO widok kalendarza
-
+        Intent calendarIntent = new Intent(this, CalendarActivity.class);
+        startActivity(calendarIntent);
     }
 
     public void Settings(View view) {

@@ -8,16 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomAdapter extends BaseAdapter { //dziedziczy po klasie BaseAdapter (jest to klasa takiego podstawowego
-// adaptera który można zastosować do np GridView albo do ListView)
+public class CustomAdapterUsersProfile extends BaseAdapter { //dziedziczy po klasie BaseAdapter
 //przedstawia całe zaadoptowanie tego grida
     private String[] plantsNames;
     private int[] imagesPhoto;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public CustomAdapter(String[] imageNames, int[] imagesPhoto, Context context) {
-        this.plantsNames = imageNames;
+    public CustomAdapterUsersProfile(String[] plantsNames, int[] imagesPhoto, Context context) {
+        this.plantsNames = plantsNames;
         this.imagesPhoto = imagesPhoto;
         this.context = context;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

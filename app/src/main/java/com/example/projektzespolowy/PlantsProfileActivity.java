@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -41,5 +42,13 @@ public class PlantsProfileActivity extends AppCompatActivity {
         editPlantBtn = (Button) findViewById(R.id.editPlantBtn);
         gridView = (GridView) findViewById(R.id.gridView);
 
+    }
+
+
+
+
+    public void Menu(View view) {
+        Intent menuIntent = new Intent(getApplicationContext(), NavigationActivity.class);
+        startActivity(menuIntent);
     }
 }
