@@ -21,15 +21,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/plantsAvatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+<!--    <ImageView-->
+<!--        android:id="@+id/plantsAvatar"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:layout_marginTop="44dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <include layout="@layout/plantlayout"
+        android:id="@+id/plantlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/menu"
@@ -42,31 +47,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/plantsName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="plant's name"
-        android:textColor="@color/dark_grey"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/plantsAvatar"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/plantsName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="plant's name"-->
+<!--        android:textColor="@color/dark_grey"-->
+<!--        android:textSize="22sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/plantsAvatar"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/species"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="species"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/plantsAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/plantsName" />
+<!--    <TextView-->
+<!--        android:id="@+id/species"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:text="species"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/plantsAvatar"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/plantsName" />-->
 
     <TextView
         android:id="@+id/textView1"
@@ -78,7 +83,7 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plantsAvatar" />
+        app:layout_constraintTop_toBottomOf="@+id/plantlayout" />
 
     <TextView
         android:id="@+id/textView2"
@@ -126,7 +131,7 @@
         android:text="add picture"
         app:layout_constraintBottom_toTopOf="@+id/editPlantBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/species" />
+        app:layout_constraintTop_toBottomOf="@+id/plantlayout" />
 
     <Button
         android:id="@+id/editPlantBtn"
@@ -149,7 +154,7 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/wateringFrequency"
         app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/plantsAvatar" />
+        app:layout_constraintTop_toBottomOf="@+id/plantlayout" />
 
     <TextView
         android:id="@+id/wateringFrequency"

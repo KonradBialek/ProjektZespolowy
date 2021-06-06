@@ -10,10 +10,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.zip.Inflater;
 
 public class UserBrowserActivity extends AppCompatActivity {
-    Inflater inflater = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

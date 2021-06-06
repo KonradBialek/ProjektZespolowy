@@ -53,16 +53,19 @@
                 android:textAppearance="@style/username"/>
 <!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
 
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
-            <include layout="@layout/plantlayout"/>
+
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout1"/>
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout2"/>
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout3"/>
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout4"/>
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout5"/>
+            <include layout="@layout/plantlayout"
+                android:id="@+id/plantlayout6"/>
 
 
         </LinearLayout>

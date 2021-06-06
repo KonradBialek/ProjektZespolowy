@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisplayPictureActivity extends AppCompatActivity {
 
@@ -39,5 +40,9 @@ public class DisplayPictureActivity extends AppCompatActivity {
     public void Menu(View view) {
         Intent menuIntent = new Intent(getApplicationContext(), NavigationActivity.class);
         startActivity(menuIntent);
+    }
+
+    public void openPlantActivity(View view) {
+        // ignoruj
     }
 }

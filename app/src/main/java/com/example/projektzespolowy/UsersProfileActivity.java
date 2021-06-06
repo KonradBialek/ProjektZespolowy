@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class UsersProfileActivity extends AppCompatActivity {
 
@@ -37,4 +38,7 @@ public class UsersProfileActivity extends AppCompatActivity {
         startActivity(menuIntent);
     }
 
+    public void openProfileActivity(View view) {
+        // ignoruj
+    }
 }
