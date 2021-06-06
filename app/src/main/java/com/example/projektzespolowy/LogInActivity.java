@@ -35,6 +35,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -55,8 +56,11 @@ public class LogInActivity extends AppCompatActivity {
         final String password = ((EditText) findViewById(R.id.password)).getText().toString();
         byte[] hash = null;
         if(password.length()!=0 && username.length()!=0) {
-            hash = Hash(password);
-            Toast.makeText(this, new String(hash), Toast.LENGTH_LONG).show();
+            hash = Storage.Hash(password);
+            if(username.equals("python") && Arrays.toString(hash).equals(Arrays.toString(Storage.Hash("python123")))) {
+                Intent intent = new Intent(this, NavigationActivity.class);
+                startActivity(intent);
+            }
         }
 
 //// Instantiate the RequestQueue.
@@ -82,8 +86,6 @@ public class LogInActivity extends AppCompatActivity {
 //// Add the request to the RequestQueue.
 //        queue.add(stringRequest);
 
-        Intent intent = new Intent(this, NavigationActivity.class); // tmp
-        startActivity(intent);
     }
     public void openRegisterActivity(View view){
         // zmienić RegisterActivity na SettingsActivity, BrowserActivity, AddPhotoActivity, RecognitionActivity
@@ -93,16 +95,5 @@ public class LogInActivity extends AppCompatActivity {
     public void openPlantRecognitionActivity(View view){
         Intent intent = new Intent(this, PlantRecognitionActivity.class);
         startActivity(intent);
-    }
-
-    public byte[] Hash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        SecureRandom random = new SecureRandom();
-        byte[] salt = new byte[16];
-        random.nextBytes(salt);
-
-        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
-        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-
-        return factory.generateSecret(spec).getEncoded();
     }
 }

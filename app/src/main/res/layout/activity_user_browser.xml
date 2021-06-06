@@ -53,22 +53,16 @@
                 android:textAppearance="@style/username"/>
 
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout1"/>
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout2"/>
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout3"/>
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout4"/>
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout5"/>
             <include layout="@layout/userlayout"
-                android:onClick="openProfileActivity"
                 android:id="@+id/userlayout6"/>
 
 
