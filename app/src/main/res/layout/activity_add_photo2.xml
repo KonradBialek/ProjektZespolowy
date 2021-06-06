@@ -51,17 +51,6 @@
             android:gravity="center_horizontal|top"
             tools:srcCompat="@tools:sample/avatars" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/species"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/imageView3"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:gravity="center_horizontal|top"-->
-<!--        android:lineSpacingExtra="0sp"-->
-<!--        android:text="species"-->
-<!--        android:textAppearance="@style/username" />-->
-
             <RelativeLayout
                 android:id="@+id/frame_1"
                 android:layout_width="wrap_content"
@@ -85,16 +74,7 @@
                     android:hint="species"
                     android:textAppearance="@style/username_password" />
             </RelativeLayout>
-        <!--    <TextView-->
-        <!--        android:id="@+id/plants_name"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_below="@id/frame_1"-->
-        <!--        android:layout_marginTop="30dp"-->
-        <!--        android:gravity="center_horizontal|top"-->
-        <!--        android:lineSpacingExtra="0sp"-->
-        <!--        android:text="plant's name"-->
-        <!--        android:textAppearance="@style/username" />-->
+
             <RelativeLayout
                 android:id="@+id/frame_2"
                 android:layout_width="wrap_content"

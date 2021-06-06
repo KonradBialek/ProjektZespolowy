@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,7 +31,12 @@ public class AddPhoto2Activity extends AppCompatActivity {
     }
 
     public void addPhoto(View view) {
-        toastMsg("Photo added");
+        Storage.plant_species = ((EditText) findViewById(R.id.species)).getText().toString();
+        Storage.plant_name = ((EditText) findViewById(R.id.plants_name)).getText().toString();
+        Storage.plant_description = ((EditText) findViewById(R.id.description)).getText().toString();
+        Bundle extras = getIntent().getExtras();
+        Storage.plant_photo = Uri.parse(extras.getString("imageUri"));
+        toastMsg("Photo added"); // todo addphoto
 
     }
 

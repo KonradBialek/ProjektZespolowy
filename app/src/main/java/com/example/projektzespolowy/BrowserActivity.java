@@ -18,12 +18,14 @@ public class BrowserActivity extends AppCompatActivity {
     public void SearchUser(View view) {
         final String name = ((EditText) findViewById(R.id.name)).getText().toString();
         Intent intent = new Intent(this, UserBrowserActivity.class);
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 
     public void SearchPlant(View view) {
         final String name = ((EditText) findViewById(R.id.name)).getText().toString();
         Intent intent = new Intent(this, PlantBrowserActivity.class);
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 

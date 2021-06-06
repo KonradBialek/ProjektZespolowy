@@ -16,7 +16,21 @@ public class UsersProfileActivity extends AppCompatActivity {
     Button menu;
     TextView userName;
     GridView gridView;
+    String name;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_users_profile);
+        try {
+            Bundle extras = getIntent().getExtras();
+             name = extras.getString("name");
+        } catch (Exception e) {
+            name = "username";
+        }
+        userName = (TextView) findViewById(R.id.userName);
+        userName.setText(name);
 
+    }
 
     public void Menu(View view) {
         Intent menuIntent = new Intent(getApplicationContext(), NavigationActivity.class);

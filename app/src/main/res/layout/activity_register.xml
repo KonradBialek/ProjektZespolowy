@@ -8,23 +8,21 @@
     android:background="@drawable/background">
 
     <!-- Logo lub nazwa aplikacji -->
-    <TextView
-        android:id="@+id/logo_lub_na"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="44dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="0sp"
-        android:text="@string/logo_lub_na"
-        android:textAppearance="@style/logo_lub_na" />
+        android:src="@drawable/logo"/>
 
     <TextView
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo_lub_na"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:gravity="center_horizontal|top"
