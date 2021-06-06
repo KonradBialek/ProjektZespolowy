@@ -51,15 +51,20 @@
                 android:layout_height="wrap_content"
                 android:text="No users found. Similar users:"
                 android:textAppearance="@style/username"/>
-<!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
 
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
-            <include layout="@layout/userlayout"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout1"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout2"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout3"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout4"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout5"/>
+            <include layout="@layout/userlayout"
+                android:id="@+id/userlayout6"/>
+
 
         </LinearLayout>
     </ScrollView>
