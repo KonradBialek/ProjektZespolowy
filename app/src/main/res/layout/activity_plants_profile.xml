@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".PlantsProfileActivity">
 
     <!--GridView sprawia że wyświetlamy obiekty w formie siatki -->
@@ -36,7 +37,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
-
+        android:onClick="Menu"
         android:background="@drawable/menu_burger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

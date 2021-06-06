@@ -12,6 +12,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
+        android:onClick="Menu"
         android:background="@drawable/menu_burger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,21 +22,35 @@
         android:layout_width="328dp"
         android:layout_height="307dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="31dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarHeaderTextView" />
+
 
     <ListView
-        android:id="@+id/listView"
-        android:layout_width="413dp"
-        android:layout_height="335dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/calListView"
+        android:layout_width="328dp"
+        android:layout_height="307dp"
+        android:layout_marginTop="20dp"
+        android:choiceMode="multipleChoice"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plantsCalendar" />
+
+    <TextView
+        android:id="@+id/calendarHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Calendar"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

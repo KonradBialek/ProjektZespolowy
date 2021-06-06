@@ -4,33 +4,51 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PlantsProfileActivity extends AppCompatActivity {
 
-    ImageView imageView;
-    TextView textView;
-    //odbieramy wysłaną (w UsersProfileActivity) aktywność
+    Button menu;
+    TextView plantsName;
+    ImageView plantsAvatar;
+    TextView species;
+    TextView nextWateringDate;
+    TextView wateringFrequency;
+    TextView nextFertilisingDate;
+    TextView fertilisingFrequency;
+    Button addPictureBtn;
+    Button editPlantBtn;
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plants_profile);
 
-        imageView = findViewById(R.id.imageView);
-        textView = findViewById(R.id.minPlantName);
+        menu = (Button) findViewById(R.id.menu);
+        plantsName = (TextView) findViewById(R.id.plantsName);
+        plantsAvatar = (ImageView) findViewById(R.id.plantsAvatar);
+        species = (TextView) findViewById(R.id.species);
+        nextWateringDate = (TextView) findViewById(R.id.nextWateringDate);
+        nextFertilisingDate = (TextView) findViewById(R.id.nextFertilisingDate);
+        fertilisingFrequency = (TextView) findViewById(R.id.fertilisingFrequency);
+        wateringFrequency = (TextView) findViewById(R.id.wateringFrequency);
+        addPictureBtn = (Button) findViewById(R.id.addPictureBtn);
+        editPlantBtn = (Button) findViewById(R.id.editPlantBtn);
+        gridView = (GridView) findViewById(R.id.gridView);
 
-        Intent intent = getIntent();//pobieramy intencję która nas uruchomiła do obiektu intent
+    }
 
-        //teraz z tej intencji będziemy pobierać dane które dodatkowo przyszły
-        String selectedName = intent.getStringExtra("name");//pobieram przysłany łańcuch o kluczu name i umieszczam go w selectedName
-        int selectedImage = intent.getIntExtra("image", 0);//pobieram identyfikator zdjęcia o kluczu image w postaci int,
-        // argument defaultValue o wartości 0, oznacza że jakbym nic nie znalazła o takim kluczu w mojej intencji to domyślnie zostanie mi
-        //zwrócone 0
 
-        textView.setText(selectedName); //ustawiam w textView to co przyszło
-        imageView.setImageResource(selectedImage); //analogicznie
 
+
+    public void Menu(View view) {
+        Intent menuIntent = new Intent(getApplicationContext(), NavigationActivity.class);
+        startActivity(menuIntent);
     }
 }
