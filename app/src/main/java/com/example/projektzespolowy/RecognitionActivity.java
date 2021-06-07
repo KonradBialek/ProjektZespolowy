@@ -30,7 +30,6 @@ public class RecognitionActivity extends AppCompatActivity {
             Uri uri = data.getData();
             Intent intent=new Intent(this,Recognition2Activity.class);
             intent.putExtra("imageUri", uri.toString());
-            Toast.makeText(this, data.getData().toString(), Toast.LENGTH_LONG).show();
             startActivity(intent);
         }
     }

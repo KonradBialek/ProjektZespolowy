@@ -38,7 +38,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="0sp"
-        android:text="Species"
+        android:text=""
         android:textAppearance="@style/settings" />
     <Button
         android:id="@+id/another_picture"

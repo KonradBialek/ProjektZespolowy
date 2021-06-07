@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Recognition3Activity extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class Recognition3Activity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         Uri myUri = Uri.parse(extras.getString("imageUri"));
         iv_photo.setImageURI(myUri);
+        TextView tv = (TextView)findViewById(R.id.species);
+        tv.setText(Storage.plant_species);
     }
 
     public void anotherPicture(View view) {

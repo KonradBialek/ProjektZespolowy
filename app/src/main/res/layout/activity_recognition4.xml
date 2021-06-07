@@ -53,18 +53,6 @@
                 android:gravity="center_horizontal|top"
                 tools:srcCompat="@tools:sample/avatars" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/plants_name"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/imageView3"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:gravity="center_horizontal|top"-->
-<!--                android:lineSpacingExtra="0sp"-->
-<!--                android:text="Plant's name"-->
-<!--                android:textAppearance="@style/log_in_register" />-->
-
         <RelativeLayout
             android:id="@+id/frame_1"
             android:layout_width="wrap_content"
@@ -88,17 +76,6 @@
                 android:hint="Plant's name"
                 android:textAppearance="@style/username_password" />
         </RelativeLayout>
-<!--            <TextView-->
-<!--                android:id="@+id/watering_date"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/plants_name"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:gravity="center_horizontal|top"-->
-<!--                android:lineSpacingExtra="0sp"-->
-<!--                android:text="last watering date"-->
-<!--                android:textAppearance="@style/log_in_register" />-->
             <RelativeLayout
                 android:id="@+id/frame_2"
                 android:layout_width="wrap_content"
@@ -117,22 +94,11 @@
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:gravity="center_horizontal|top"
-                    android:inputType="textPersonName"
+                    android:inputType="datetime"
                     android:lineSpacingExtra="0sp"
                     android:hint="last watering date"
                     android:textAppearance="@style/username_password" />
             </RelativeLayout>
-<!--            <TextView-->
-<!--                android:id="@+id/water_freq"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/watering_date"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:gravity="center_horizontal|top"-->
-<!--                android:lineSpacingExtra="0sp"-->
-<!--                android:text="how often do you want to water \nthis plant? (in days)"-->
-<!--                android:textAppearance="@style/log_in_register" />-->
 
             <RelativeLayout
                 android:id="@+id/frame_3"
@@ -152,7 +118,7 @@
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:gravity="center_horizontal|top"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:lineSpacingExtra="0sp"
                     android:hint="watering frequency in days"
                     android:textAppearance="@style/username_password" />
@@ -176,7 +142,7 @@
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:gravity="center_horizontal|top"
-                    android:inputType="textPersonName"
+                    android:inputType="datetime"
                     android:lineSpacingExtra="0sp"
                     android:hint="last fertilizing date"
                     android:textAppearance="@style/username_password" />
@@ -200,7 +166,7 @@
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:gravity="center_horizontal|top"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:lineSpacingExtra="0sp"
                     android:hint="fertilizing frequency in days"
                     android:textAppearance="@style/username_password" />
