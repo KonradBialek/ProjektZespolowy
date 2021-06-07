@@ -17,19 +17,33 @@ public class UsersProfileActivity extends AppCompatActivity {
     Button menu;
     TextView userName;
     GridView gridView;
-    String name;
+
+    String[] names = {};
+    int[] images = {};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_profile);
-        try {
-            Bundle extras = getIntent().getExtras();
-             name = extras.getString("name");
-        } catch (Exception e) {
-            name = "username";
-        }
-        userName = (TextView) findViewById(R.id.userName);
-        userName.setText(name);
+
+        gridView = findViewById(R.id.gridView);
+        userName = findViewById(R.id.userName);
+
+        CustomAdapterUsersProfile customAdapterUsersProfile = new CustomAdapterUsersProfile(names, images, getApplicationContext());
+        gridView.setAdapter(customAdapterUsersProfile);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String selectedName = names[i];
+                int selectedImage = images[i];
+                Intent detailsImageIntent = new Intent(getApplicationContext(), PlantsProfileActivity.class);
+                detailsImageIntent.putExtra("name",selectedName);
+                detailsImageIntent.putExtra("image",selectedImage);
+                startActivity(detailsImageIntent);
+            }
+        });
 
     }
 

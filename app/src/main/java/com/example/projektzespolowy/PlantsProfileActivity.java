@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -25,6 +26,8 @@ public class PlantsProfileActivity extends AppCompatActivity {
     Button editPlantBtn;
     GridView gridView;
 
+    int[] images = {};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,27 @@ public class PlantsProfileActivity extends AppCompatActivity {
         addPictureBtn = (Button) findViewById(R.id.addPictureBtn);
         editPlantBtn = (Button) findViewById(R.id.editPlantBtn);
         gridView = (GridView) findViewById(R.id.gridView);
+
+        Intent intent = getIntent();
+        String selectedName = intent.getStringExtra("name");
+        int selectedImage = intent.getIntExtra("image", 0);
+
+        //textView.setText(selectedName); //wywala błędy nwm czemu
+        //imageView.setImageResource(selectedImage);
+
+        CustomAdapterPlantsProfile customAdapterPlantsProfile = new CustomAdapterPlantsProfile(images, getApplicationContext());
+        gridView.setAdapter(customAdapterPlantsProfile);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int selectedImage = images[i];
+                Intent detailsImageIntent = new Intent(getApplicationContext(), DisplayPictureActivity.class);
+
+                detailsImageIntent.putExtra("image",selectedImage);
+                startActivity(detailsImageIntent);
+            }
+        });
 
     }
 
