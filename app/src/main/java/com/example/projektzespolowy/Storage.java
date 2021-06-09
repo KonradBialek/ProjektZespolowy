@@ -18,9 +18,9 @@ import javax.crypto.spec.PBEKeySpec;
 
 public class Storage {
     // Addphoto2
-    public static String plant_description = "qwerty";
-    public static String plant_species = "qwerty";
-    public static String plant_name = "qwerty";
+    public static String plant_description = "opis";
+    public static String plant_species = "gatunek";
+    public static String plant_name = "nazwa";
     public static Uri plant_photo;
     // LogIn
     public static byte[] passwordhash;
@@ -28,7 +28,7 @@ public class Storage {
     public static String username = "python";
     public static String usernamedefault = "python";
     // Recognition4
-    public static String plants_name = "qwerty";
+    public static String plants_name = "nazwa";
     public static Date watering_date;
     public static int water_freq = 5;
     public static Date fertilizing_date;

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -39,6 +40,8 @@ public class Recognition4Activity extends AppCompatActivity {
         Storage.fertilizing_freq = fertilizing_freq;
 
         // TODO tworzenie profilu rośliny
+        Toast toast = Toast.makeText(this, "Utworzono roślinę", Toast.LENGTH_LONG);
+        toast.show();
         finish();
     }
 

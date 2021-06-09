@@ -51,11 +51,13 @@ public class SettingsActivity extends AppCompatActivity {
         final String old_password = ((EditText) findViewById(R.id.old_password)).getText().toString();
         final String new_password = ((EditText) findViewById(R.id.new_password)).getText().toString();
         final String retype_new_password = ((EditText) findViewById(R.id.retype_new_password)).getText().toString();
-        if(Arrays.toString(Storage.Hash(old_password)).equals(Arrays.toString(Storage.passwordhash))
-            && new_password.equals(retype_new_password)){
-            Storage.passwordhash = Storage.Hash(old_password);
-            toastMsg("Password changed");
-        }
+        if(old_password.length()!=0 && new_password.length()!=0 && retype_new_password.length()!=0
+                && new_password.equals(retype_new_password))
+            if(Arrays.toString(Storage.Hash(old_password)).equals(Arrays.toString(Storage.passwordhash))
+                && new_password.equals(retype_new_password)){
+                Storage.passwordhash = Storage.Hash(old_password);
+                toastMsg("Password changed");
+            }
     }
 
 //    public void ChangeDescription(View view) {
@@ -80,13 +82,14 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void DeleteAccount(View view) throws InvalidKeySpecException, NoSuchAlgorithmException {
         final String old_password = ((EditText) findViewById(R.id.old_password)).getText().toString();
-        if(Arrays.toString(Storage.Hash(old_password)).equals(Arrays.toString(Storage.passwordhash)))
-        {
-            Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            toastMsg("Account deleted");
-        }
+        if(old_password.length()!=0)
+            if(Arrays.toString(Storage.Hash(old_password)).equals(Arrays.toString(Storage.passwordhash)))
+            {
+                Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                toastMsg("Account deleted");
+            }
     }
 
     public void Menu(View view) {
