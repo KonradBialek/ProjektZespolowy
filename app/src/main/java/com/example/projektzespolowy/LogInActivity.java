@@ -57,7 +57,7 @@ public class LogInActivity extends AppCompatActivity {
         byte[] hash = null;
         if(password.length()!=0 && username.length()!=0) {
             hash = Storage.Hash(password);
-            if(username.equals("python") && Arrays.toString(hash).equals(Arrays.toString(Storage.Hash("python123")))) {
+            if(username.equals(Storage.usernamedefault) && Arrays.toString(hash).equals(Arrays.toString(Storage.Hash("python123")))) {
                 Intent intent = new Intent(this, NavigationActivity.class);
                 startActivity(intent);
             }

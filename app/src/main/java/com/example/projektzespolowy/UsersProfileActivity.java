@@ -20,7 +20,7 @@ public class UsersProfileActivity extends AppCompatActivity {
 
     String[] names = {};
     int[] images = {};
-
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,14 @@ public class UsersProfileActivity extends AppCompatActivity {
 
         gridView = findViewById(R.id.gridView);
         userName = findViewById(R.id.userName);
+
+        try {
+            Bundle extras = getIntent().getExtras();
+            name = extras.getString("name");
+        } catch (Exception e) {
+            name = Storage.usernamedefault;
+        }
+        userName.setText(name);
 
         CustomAdapterUsersProfile customAdapterUsersProfile = new CustomAdapterUsersProfile(names, images, getApplicationContext());
         gridView.setAdapter(customAdapterUsersProfile);

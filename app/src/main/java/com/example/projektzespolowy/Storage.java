@@ -26,6 +26,7 @@ public class Storage {
     public static byte[] passwordhash;
     public static byte[] salt;
     public static String username = "python";
+    public static String usernamedefault = "python";
     // Recognition4
     public static String plants_name = "qwerty";
     public static Date watering_date;
