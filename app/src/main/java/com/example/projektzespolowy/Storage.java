@@ -16,6 +16,9 @@ import java.util.Date;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
+/**
+ * Klasa zawiera informacje przechowywane w aplikacji.
+ */
 public class Storage {
     // Addphoto2
     public static String plant_description = "opis";
@@ -58,6 +61,15 @@ public class Storage {
         }
     }
 
+    /**
+     * Hashowanie hasła w celu porównania haseł wprowadzonego przez użytkownika i przechowywanego w
+     * aplikacji.
+     * @param password Hasło wprowadzone przez użytkownika lub przechowywane w aplikacji.
+     * @return Zahashowane hasło.
+     * @throws NoSuchAlgorithmException Wyrzucany, gdy podano nieprawidłowy algorytm szyfrowania.
+     * @throws InvalidKeySpecException Wyrzucany, gdy kod dostarczony lub wygenerowany do
+     * szyfrowania hasła jest nieprawidłowy.
+     */
     public static byte[] Hash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
         KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");

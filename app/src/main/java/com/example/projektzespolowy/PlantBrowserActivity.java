@@ -11,8 +11,15 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+/**
+ * Klasa obsługuje wyszukiwarkę roślin.
+ */
 public class PlantBrowserActivity extends AppCompatActivity {
 
+    /**
+     * Stworzenie widoku i możliwych profili roślin.
+     * @param savedInstanceState Informacje do stworzenia widoku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,10 +73,18 @@ public class PlantBrowserActivity extends AppCompatActivity {
         findViewById(R.id.textView6).setVisibility(View.GONE);
     }
 
+    /**
+     * Powrót do pola wyszukiwania użytkowników i roślin.
+     * @param view Obsługiwany widok.
+     */
     public void goBackToSearch(View view) {
         finish();
     }
 
+    /**
+     * Otworzenie wybranego profilu rośliny.
+     * @param view Obsługiwany widok.
+     */
     public void openPlantActivity(View view) {
         Intent intent = new Intent(this, DisplayPictureActivity.class);
         intent.putExtra("name", getIntent().getExtras().getString("name"));
@@ -78,10 +93,18 @@ public class PlantBrowserActivity extends AppCompatActivity {
         toast.show();
     }
 
+    /**
+     * Wyświetlenie menu.
+     * @param view Obsługiwany widok.
+     */
     public void Menu(View view) {
         Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Wygenerowanie losowej nazwy użytkownika.
+     */
     public static String random() {
         Random generator = new Random();
         StringBuilder randomStringBuilder = new StringBuilder();
