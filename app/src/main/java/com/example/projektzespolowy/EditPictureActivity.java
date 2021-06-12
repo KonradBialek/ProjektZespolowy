@@ -33,6 +33,12 @@ public class EditPictureActivity extends AppCompatActivity {
         confirmChangesBtn = (Button) findViewById(R.id.confirmChangesBtn);
         deletePictureBtn = (Button) findViewById(R.id.deletePictureBtn);
 
+        Intent intent = getIntent();
+        String selectedName = intent.getStringExtra("name");
+        int selectedImage = intent.getIntExtra("image", 0);
+
+        plantsName.setText(selectedName);
+        plantsPicture.setImageResource(selectedImage);
     }
 
 

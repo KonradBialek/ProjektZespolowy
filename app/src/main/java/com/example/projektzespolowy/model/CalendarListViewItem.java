@@ -5,7 +5,7 @@ public class CalendarListViewItem {
     private String name;
     private boolean isWatered;
 
-
+//wyświetlanie checkboxa na liście w aktywności kalendarza
     public CalendarListViewItem(Long id, String name, boolean isWatered) {
         this.id = id;
         this.name = name;

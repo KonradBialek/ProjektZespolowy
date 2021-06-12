@@ -34,6 +34,14 @@ public class DisplayPictureActivity extends AppCompatActivity {
         editPictureBtn = (Button) findViewById(R.id.editPictureBtn);
         likeBtn = (Button) findViewById(R.id.likeBtn);
         numberOfLikes = (TextView) findViewById(R.id.numberOfLikes);
+
+        Intent intent = getIntent();
+        String selectedName = intent.getStringExtra("name");
+        int selectedImage = intent.getIntExtra("image", 0);
+
+        plantsName.setText(selectedName);
+        plantsPicture.setImageResource(selectedImage);
+
     }
 
 
