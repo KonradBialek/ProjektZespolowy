@@ -41,9 +41,16 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.net.ssl.HttpsURLConnection;
 
+/**
+ * Klasa obsługuje logowanie do aplikacji.
+ */
 public class LogInActivity extends AppCompatActivity {
     private TextView textView;
 
+    /**
+     * Stworzenie widoku.
+     * @param savedInstanceState Informacje do stworzenia widoku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,13 +58,21 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Logowanie do aplikacji.
+     * @param view Obsługiwany widok.
+     * @throws InvalidKeySpecException Wyrzucany, gdy kod dostarczony lub wygenerowany do
+     * szyfrowania hasła jest nieprawidłowy.
+     * @throws NoSuchAlgorithmException Wyrzucany, gdy podano nieprawidłowy algorytm szyfrowania.
+     */
     public void LogIn (View view) throws InvalidKeySpecException, NoSuchAlgorithmException {
         final String username = ((EditText) findViewById(R.id.username)).getText().toString();
         final String password = ((EditText) findViewById(R.id.password)).getText().toString();
         byte[] hash = null;
         if(password.length()!=0 && username.length()!=0) {
             hash = Storage.Hash(password);
-            if(username.equals("python") && Arrays.toString(hash).equals(Arrays.toString(Storage.Hash("python123")))) {
+            if(username.equals(Storage.usernamedefault) &&
+                    Arrays.toString(hash).equals(Arrays.toString(Storage.passwordhash))) {
                 Intent intent = new Intent(this, NavigationActivity.class);
                 startActivity(intent);
             }
@@ -72,7 +87,8 @@ public class LogInActivity extends AppCompatActivity {
 //                new Response.Listener<String>() {
 //                    @Override
 //                    public void onResponse(String response) {
-//                        Toast.makeText(LogInActivity.this, response.toString(),Toast.LENGTH_LONG).show();
+//                        Toast.makeText(LogInActivity.this, response.toString(),
+//                        Toast.LENGTH_LONG).show();
 //                        Toast.makeText(LogInActivity.this, "OK",Toast.LENGTH_LONG).show();
 //                    }
 //                }, new Response.ErrorListener() {
@@ -87,11 +103,20 @@ public class LogInActivity extends AppCompatActivity {
 //        queue.add(stringRequest);
 
     }
+
+    /**
+     * Wyświetlenie widoku rejestracji.
+     * @param view Obsługiwany widok.
+     */
     public void openRegisterActivity(View view){
-        // zmienić RegisterActivity na SettingsActivity, BrowserActivity, AddPhotoActivity, RecognitionActivity
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Wyświetlenie widoku łączenia z serwerem.
+     * @param view Obsługiwany widok.
+     */
     public void openPlantRecognitionActivity(View view){
         Intent intent = new Intent(this, PlantRecognitionActivity.class);
         startActivity(intent);

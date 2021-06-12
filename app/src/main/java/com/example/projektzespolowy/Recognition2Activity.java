@@ -9,8 +9,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ * Klasa daje możliwość skontrolowania czy wybrano prawidłowe zdjęcie.
+ */
 public class Recognition2Activity extends AppCompatActivity {
 
+    /**
+     * Stworzenie widoku, obsługa zdjęcia.
+     * @param savedInstanceState Informacje do stworzenia widoku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,16 +28,28 @@ public class Recognition2Activity extends AppCompatActivity {
         iv_photo.setImageURI(myUri);
     }
 
+    /**
+     * Powrót do wyboru zdjęcia.
+     * @param view Obsługiwany widok.
+     */
     public void anotherPicture(View view) {
         finish();
     }
 
+    /**
+     * Wywołanie rozpoznawania zdjęcia.
+     * @param view Obsługiwany widok.
+     */
     public void Recognize(View view) {
         Intent intent = new Intent(this, Recognition3Activity.class);
         intent.putExtra("imageUri", getIntent().getExtras().getString("imageUri"));
         startActivity(intent);
     }
 
+    /**
+     * Wyświetlenie menu.
+     * @param view Obsługiwany widok.
+     */
     public void Menu(View view) {
         Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);

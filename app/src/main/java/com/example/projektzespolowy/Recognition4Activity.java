@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +16,10 @@ import java.util.Date;
 
 public class Recognition4Activity extends AppCompatActivity {
 
+    /**
+     * Stworzenie widoku, obsługa zdjęcia.
+     * @param savedInstanceState Informacje do stworzenia widoku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,11 @@ public class Recognition4Activity extends AppCompatActivity {
         iv_photo.setImageURI(myUri);
     }
 
+    /**
+     * Pobranie informacji o roślinie i wprowadzenie ich do pamięci.
+     * @param view Obsługiwany widok.
+     * @throws ParseException Wyrzucan, gdy nastąbi błąd odczytu daty.
+     */
     public void Confirm(View view) throws ParseException {
         final String plants_name = ((EditText) findViewById(R.id.plants_name)).getText().toString();
         final Date watering_date = (new SimpleDateFormat("dd-MM-YYYY")).parse(((EditText) findViewById(R.id.watering_date)).getText().toString());
@@ -38,10 +48,15 @@ public class Recognition4Activity extends AppCompatActivity {
         Storage.fertilizing_date = fertilizing_date;
         Storage.fertilizing_freq = fertilizing_freq;
 
-        // TODO tworzenie profilu rośliny
+        Toast toast = Toast.makeText(this, "Utworzono roślinę", Toast.LENGTH_LONG);
+        toast.show();
         finish();
     }
 
+    /**
+     * Wyświetlenie menu.
+     * @param view Obsługiwany widok.
+     */
     public void Menu(View view) {
         Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);

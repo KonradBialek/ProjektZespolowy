@@ -16,18 +16,22 @@ import java.util.Date;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
+/**
+ * Klasa zawiera informacje przechowywane w aplikacji.
+ */
 public class Storage {
     // Addphoto2
-    public static String plant_description = "qwerty";
-    public static String plant_species = "qwerty";
-    public static String plant_name = "qwerty";
+    public static String plant_description = "opis";
+    public static String plant_species = "gatunek";
+    public static String plant_name = "nazwa";
     public static Uri plant_photo;
     // LogIn
     public static byte[] passwordhash;
     public static byte[] salt;
     public static String username = "python";
+    public static String usernamedefault = "python";
     // Recognition4
-    public static String plants_name = "qwerty";
+    public static String plants_name = "nazwa";
     public static Date watering_date;
     public static int water_freq = 5;
     public static Date fertilizing_date;
@@ -57,6 +61,15 @@ public class Storage {
         }
     }
 
+    /**
+     * Hashowanie hasła w celu porównania haseł wprowadzonego przez użytkownika i przechowywanego w
+     * aplikacji.
+     * @param password Hasło wprowadzone przez użytkownika lub przechowywane w aplikacji.
+     * @return Zahashowane hasło.
+     * @throws NoSuchAlgorithmException Wyrzucany, gdy podano nieprawidłowy algorytm szyfrowania.
+     * @throws InvalidKeySpecException Wyrzucany, gdy kod dostarczony lub wygenerowany do
+     * szyfrowania hasła jest nieprawidłowy.
+     */
     public static byte[] Hash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
         KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");

@@ -10,9 +10,15 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/**
+ * Klasa obsługuje wyszukiwarkę użytkowników.
+ */
 public class UserBrowserActivity extends AppCompatActivity {
 
+    /**
+     * Stworzenie widoku i możliwych profili użytkowników.
+     * @param savedInstanceState Informacje do stworzenia widoku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +58,18 @@ public class UserBrowserActivity extends AppCompatActivity {
         findViewById(R.id.textView6).setVisibility(View.GONE);;
     }
 
+    /**
+     * Powrót do pola wyszukiwania użytkowników i roślin.
+     * @param view Obsługiwany widok.
+     */
     public void goBackToSearch(View view) {
         finish();
     }
 
+    /**
+     * Otworzenie wybranego profilu użytkownika.
+     * @param view Obsługiwany widok.
+     */
     public void openProfileActivity(View view) {
         Intent intent = new Intent(this, UsersProfileActivity.class);
         intent.putExtra("name", getIntent().getExtras().getString("name"));
@@ -64,6 +78,10 @@ public class UserBrowserActivity extends AppCompatActivity {
         toast.show();
     }
 
+    /**
+     * Wyświetlenie menu.
+     * @param view Obsługiwany widok.
+     */
     public void Menu(View view) {
         Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);
