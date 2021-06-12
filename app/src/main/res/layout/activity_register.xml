@@ -6,8 +6,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje logowanie użytkownika.-->
 
-    <!-- Logo lub nazwa aplikacji -->
+    <!--    Miejsce na logo aplikacji.-->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"
@@ -39,6 +40,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/frame">
 
+        <!--    Pole wpisania nazwy użytkownika.-->
         <EditText
             android:id="@+id/username"
             android:layout_width="wrap_content"
@@ -64,6 +66,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/frame">
 
+        <!--    Pole wpisania hasła użytkownika.-->
         <EditText
             android:id="@+id/password"
             android:layout_width="wrap_content"
@@ -88,6 +91,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/frame">
 
+        <!--    Pole powtórzenia hasła użytkownika.-->
         <EditText
             android:id="@+id/password2"
             android:layout_width="wrap_content"
@@ -103,6 +107,7 @@
             android:textAppearance="@style/username_password" />
     </RelativeLayout>
 
+    <!--    Przycisk wywołuje proces rejestracji.-->
     <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
@@ -117,6 +122,7 @@
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
 
+    <!--    Przycisk wywołuje przejście do logowania.-->
     <Button
         android:id="@+id/or_log_in"
         android:layout_width="wrap_content"
@@ -130,8 +136,5 @@
         android:text="@string/or_log_in"
         android:textAppearance="@style/log_in_register"
         android:background="@drawable/button"/>
-
-<!--    <include layout="@layout/activity_navigation"/>-->
-
 </RelativeLayout>
 

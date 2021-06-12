@@ -7,7 +7,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje odpowiedź przetworzenia.-->
 
+    <!--    Przycisk wywołuje przejście do menu.-->
     <Button
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -19,6 +21,7 @@
         android:background="@drawable/menu_burger"
         android:onClick="Menu"/>
 
+    <!--    Miejsce na przetwarzany obraz.-->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
@@ -29,6 +32,7 @@
         android:gravity="center_horizontal|top"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <!--    Pole, w którym wyświetla się rozpoznany gatunek rośliny.-->
     <TextView
         android:id="@+id/species"
         android:layout_width="wrap_content"
@@ -40,6 +44,7 @@
         android:lineSpacingExtra="0sp"
         android:text=""
         android:textAppearance="@style/settings" />
+    <!--    Przycisk wywołuje powrót do poprzedniego widoku.-->
     <Button
         android:id="@+id/another_picture"
         android:layout_width="wrap_content"
@@ -53,6 +58,7 @@
         android:text="another picture"
         android:textAppearance="@style/log_in_register"
         android:background="@drawable/button" />
+    <!--    Przycisk wywołuje potwierdzenie rozpoznania rośliny.-->
     <Button
         android:id="@+id/confirm"
         android:layout_width="wrap_content"

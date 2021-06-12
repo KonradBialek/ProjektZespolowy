@@ -6,6 +6,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje wybór źródła obrazu do dodania.-->
 
     <TextView
         android:id="@+id/add_picture_to_gallery"
@@ -19,6 +20,7 @@
         android:text="Add picture to gallery"
         android:textAppearance="@style/settings" />
 
+    <!--    Przycisk wywołuje uruchomienie galerii.-->
     <Button
         android:id="@+id/upload_from_gallery"
         android:layout_width="wrap_content"
@@ -32,6 +34,8 @@
         android:text="Upload from gallery"
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
+
+    <!--    Przycisk wywołuje uruchomienie aparatu.-->
     <Button
         android:id="@+id/take_a_picture"
         android:layout_width="wrap_content"
@@ -46,7 +50,7 @@
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
 
-
+    <!--    Przycisk wywołuje przejście do menu.-->
     <Button
         android:id="@+id/menu"
         android:layout_width="40dp"

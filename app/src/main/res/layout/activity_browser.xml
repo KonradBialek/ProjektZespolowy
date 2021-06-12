@@ -6,7 +6,9 @@
     android:layout_height="fill_parent"
     android:background="@drawable/background"
     tools:context=".BrowserActivity">
+    <!--    Widok obsługuje wyszukiwanie użytkowników lub roślin.-->
 
+    <!--    Przycisk wywołuje przejście do menu.-->
     <Button
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -27,6 +29,7 @@
         android:layout_marginTop="218dp"
         android:background="@drawable/frame">
 
+        <!--    Pole wpisania nazwy użytkownika lub gatunku rośliny.-->
         <EditText
             android:id="@+id/name"
             android:layout_width="350dp"
@@ -42,6 +45,7 @@
             android:textAppearance="@style/username_password_small" />
     </RelativeLayout>
 
+    <!--    Przycisk wywołuje wyszukiwanie użytkowników.-->
     <Button
         android:id="@+id/search_user"
         android:layout_width="wrap_content"
@@ -57,6 +61,7 @@
         android:textAppearance="@style/button_text"
         tools:ignore="OnClick" />
 
+    <!--    Przycisk wywołuje wyszukiwanie roślin.-->
     <Button
         android:id="@+id/search_plant"
         android:layout_width="wrap_content"
@@ -70,8 +75,5 @@
         android:onClick="SearchPlant"
         android:text="Search plant"
         android:textAppearance="@style/button_text" />
-
-
-    <!--        <include layout="@layout/activity_navigation"/>-->
 
 </RelativeLayout>

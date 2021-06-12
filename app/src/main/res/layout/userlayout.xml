@@ -6,6 +6,7 @@
     android:onClick="openProfileActivity"
     android:id="@+id/userlayout">
 
+    <!--    Pole, w którym wyświetla się nazwa użytkownika.-->
     <TextView
         android:id="@+id/userName"
         android:layout_width="284dp"
@@ -22,6 +23,7 @@
         app:layout_constraintStart_toEndOf="@+id/usersAvatar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    Miejsce na awatar użytkownika.-->
     <ImageView
         android:id="@+id/usersAvatar"
         android:layout_width="100dp"

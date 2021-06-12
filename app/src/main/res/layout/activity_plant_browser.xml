@@ -7,7 +7,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje wybór spośród wyszukanych roślin.-->
 
+    <!--    Przycisk wywołuje przejście do menu.-->
     <Button
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -19,6 +21,7 @@
         android:background="@drawable/menu_burger"
         android:onClick="Menu"/>
 
+    <!--    Przycisk wywołuje powrót do wyszukiwania.-->
     <Button
         android:id="@+id/go_back_to_search"
         android:layout_width="wrap_content"
@@ -53,7 +56,7 @@
                 android:textAppearance="@style/username"/>
 <!--                android:visibility="@{isVisible ? View.VISIBLE : View.GONE}"/>-->
 
-
+            <!--    Przykład wyszukanych roślin.-->
             <include layout="@layout/plantlayout"
                 android:id="@+id/plantlayout1"/>
             <include layout="@layout/plantlayout"

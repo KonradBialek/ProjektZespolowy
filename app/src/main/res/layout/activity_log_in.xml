@@ -6,11 +6,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje logowanie użytkownika.-->
 
-    <!--    <include layout="@layout/activity_navigation"/>-->
-
-    <!-- Logo lub nazwa aplikacji -->
-
+    <!--    Miejsce na logo aplikacji.-->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"
@@ -42,6 +40,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/frame">
 
+        <!--    Pole wpisania nazwy użytkownika.-->
         <EditText
             android:id="@+id/username"
             android:layout_width="wrap_content"
@@ -67,6 +66,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/frame">
 
+        <!--    Pole wpisania hasła użytkownika.-->
         <EditText
             android:id="@+id/password"
             android:layout_width="wrap_content"
@@ -82,6 +82,7 @@
             android:textAppearance="@style/username_password" />
     </RelativeLayout>
 
+    <!--    Przycisk wywołuje proces logowania.-->
     <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
@@ -96,6 +97,7 @@
         android:textAppearance="@style/button_text"
         android:background="@drawable/button" />
 
+    <!--    Przycisk wywołuje przejście do rejestracji.-->
     <Button
         android:id="@+id/or_register"
         android:layout_width="wrap_content"
@@ -109,21 +111,9 @@
         android:text="@string/or_register"
         android:textAppearance="@style/log_in_register"
         android:background="@drawable/button" />
-<!--    <Button-->
-<!--        android:id="@+id/nav_bar"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/or_register"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:gravity="center_horizontal|top"-->
-<!--        android:lineSpacingExtra="0sp"-->
-<!--        android:onClick="NavForward"-->
-<!--        android:text="nav bar"-->
-<!--        android:textAppearance="@style/log_in_register"-->
-<!--        android:background="@drawable/button" />-->
 
 
+    <!--    Przycisk wywołuje przejście do połączenia z serwerem.-->
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
@@ -135,21 +125,4 @@
         android:onClick="openPlantRecognitionActivity"
         android:text="Plant"
         android:background="@drawable/button" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginTop="109dp"-->
-<!--        android:text="Hello World!" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="150dp"-->
-<!--        android:layout_marginTop="115dp"-->
-<!--        android:onClick="sqlButton"-->
-<!--        android:text="SQL"/>-->
 </RelativeLayout>

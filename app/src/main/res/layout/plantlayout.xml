@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:onClick="openPlantActivity">
 
+    <!--    Miejsce na zdjęcie rośliny.-->
     <ImageView
         android:id="@+id/plantsAvatar"
         android:layout_width="100dp"
@@ -16,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <!--    Pole, w którym wyświetla się nazwa rośliny.-->
     <TextView
         android:id="@+id/plantsName"
         android:layout_width="wrap_content"
@@ -29,6 +31,7 @@
         app:layout_constraintStart_toEndOf="@+id/plantsAvatar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    Pole, w którym wyświetla się gatunek rośliny.-->
     <TextView
         android:id="@+id/species"
         android:layout_width="wrap_content"

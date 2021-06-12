@@ -6,8 +6,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
+    <!--    Widok obsługuje ustawienia konta użytkownika.-->
 
-
+    <!--    Przycisk wywołuje przejście do menu.-->
     <Button
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -65,6 +66,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/frame">
 
+                <!--    Pole wpisania aktualnego hasła użytkownika.-->
                 <EditText
                     android:id="@+id/old_password"
                     android:layout_width="wrap_content"
@@ -89,6 +91,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/frame">
 
+                <!--    Pole wpisania nowego hasła użytkownika.-->
                 <EditText
                     android:id="@+id/new_password"
                     android:layout_width="wrap_content"
@@ -113,6 +116,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/frame">
 
+                <!--    Pole powtórzenia nowego hasła użytkownika.-->
                 <EditText
                     android:id="@+id/retype_new_password"
                     android:layout_width="wrap_content"
@@ -128,6 +132,7 @@
                     android:textAppearance="@style/username_password" />
             </RelativeLayout>
 
+            <!--    Przycisk wywołuje proces zmiany hasła.-->
             <Button
                 android:id="@+id/confirm"
                 android:layout_width="wrap_content"
@@ -151,10 +156,11 @@
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal|top"
                 android:lineSpacingExtra="0sp"
-                android:text="*Remember to type your passwrd to &quot;old password&quot;
-                field before deleting account."
+                android:text="*Remember to type your password to &quot;old
+                password&quot; field before deleting account."
                 android:textAppearance="@style/warning" />
 
+            <!--    Przycisk wywołuje usunięcie konta użytkownika.-->
             <Button
                 android:id="@+id/delete_account"
                 android:layout_width="wrap_content"
@@ -171,121 +177,3 @@
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
-
-
-    <!--    -->
-    <!--    <TextView-->
-    <!--        android:id="@+id/change_password"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/settings"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginTop="50dp"-->
-    <!--        android:gravity="center_horizontal|top"-->
-    <!--        android:lineSpacingExtra="0sp"-->
-    <!--        android:text="Change password"-->
-    <!--        android:textAppearance="@style/settings" />-->
-
-
-    <!--    <RelativeLayout-->
-    <!--        android:id="@+id/frame_1"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/change_password"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginTop="30dp"-->
-    <!--        android:background="@drawable/frame">-->
-
-    <!--        <EditText-->
-    <!--            android:id="@+id/old_password"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:layout_centerHorizontal="true"-->
-    <!--            android:layout_marginTop="10dp"-->
-    <!--            android:ems="10"-->
-    <!--            android:gravity="center_horizontal|top"-->
-    <!--            android:inputType="textPassword"-->
-    <!--            android:lineSpacingExtra="0sp"-->
-    <!--            android:hint="old password"-->
-    <!--            android:textAppearance="@style/username_password" />-->
-    <!--    </RelativeLayout>-->
-
-    <!--    <RelativeLayout-->
-    <!--        android:id="@+id/frame_2"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/frame_1"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:background="@drawable/frame">-->
-
-    <!--        <EditText-->
-    <!--            android:id="@+id/new_password"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:layout_centerHorizontal="true"-->
-    <!--            android:layout_marginTop="10dp"-->
-    <!--            android:ems="10"-->
-    <!--            android:gravity="center_horizontal|top"-->
-    <!--            android:inputType="textPassword"-->
-    <!--            android:lineSpacingExtra="0sp"-->
-    <!--            android:hint="new password"-->
-    <!--            android:textAppearance="@style/username_password" />-->
-    <!--    </RelativeLayout>-->
-
-    <!--    <RelativeLayout-->
-    <!--        android:id="@+id/frame_3"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/frame_2"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:background="@drawable/frame">-->
-
-    <!--        <EditText-->
-    <!--            android:id="@+id/retype_new_password"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:layout_centerHorizontal="true"-->
-    <!--            android:layout_marginTop="10dp"-->
-    <!--            android:ems="10"-->
-    <!--            android:gravity="center_horizontal|top"-->
-    <!--            android:inputType="textPassword"-->
-    <!--            android:lineSpacingExtra="0sp"-->
-    <!--            android:hint="retype new password"-->
-    <!--            android:textAppearance="@style/username_password" />-->
-    <!--    </RelativeLayout>-->
-    <!--    <Button-->
-    <!--        android:id="@+id/confirm"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/frame_3"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:gravity="center_horizontal|top"-->
-    <!--        android:lineSpacingExtra="0sp"-->
-    <!--        android:onClick="ChangePassword"-->
-    <!--        android:text="Confirm"-->
-    <!--        android:textAppearance="@style/button_text"-->
-    <!--        android:background="@drawable/button" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/delete_account"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_marginBottom="19dp"-->
-    <!--        android:gravity="center_horizontal|top"-->
-    <!--        android:lineSpacingExtra="0sp"-->
-    <!--        android:onClick="DeleteAccount"-->
-    <!--        android:text="Delete account"-->
-    <!--        android:textAppearance="@style/log_in_register"-->
-    <!--        android:background="@drawable/button" />-->
-
-    <!--&lt;!&ndash;        <include layout="@layout/activity_navigation"/>&ndash;&gt;-->
-
-    <!--</RelativeLayout>-->
